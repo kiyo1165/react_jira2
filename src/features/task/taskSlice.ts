@@ -184,7 +184,7 @@ export const tasksSlice = createSlice({
     editTask(state, action: PayloadAction<POST_TASK>) {
       state.editedTask = action.payload;
     },
-    slectedTask(state, action: PayloadAction<READ_TASK>) {
+    selectTask(state, action: PayloadAction<READ_TASK>) {
       state.selectedTask = action.payload;
     },
   },
@@ -257,7 +257,7 @@ export const tasksSlice = createSlice({
             task.id === action.payload.id ? action.payload : task
           ),
           editTask: initialState.editedTask,
-          selectedTask: initialState.selectedTask,
+          selectTask: initialState.selectedTask,
         };
       }
     );
@@ -283,7 +283,7 @@ export const tasksSlice = createSlice({
   },
 });
 
-export const { editTask, slectedTask } = tasksSlice.actions;
+export const { editTask, selectTask } = tasksSlice.actions;
 
 export const selectSelectedTask = (state: RootState) => state.task.selectedTask;
 export const selectEditedTask = (state: RootState) => state.task.editedTask;
