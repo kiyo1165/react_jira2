@@ -71,7 +71,7 @@ export const fetchAsyncCreateTask = createAsyncThunk(
   "task/createTask",
   async (task: POST_TASK) => {
     const response = await axios.post<READ_TASK>(
-      `${process.env.REACT_APP_API_URL}api/category/`,
+      `${process.env.REACT_APP_API_URL}api/tasks/`,
       task,
       {
         headers: {
@@ -89,7 +89,7 @@ export const fetchAsyncUpdateTask = createAsyncThunk(
   "task/updateTask",
   async (task: POST_TASK) => {
     const response = await axios.put<READ_TASK>(
-      `${process.env.REACT_APP_API_URL}api/tasks/${task.id}`,
+      `${process.env.REACT_APP_API_URL}api/tasks/${task.id}/`,
       task,
       {
         headers: {
@@ -244,7 +244,7 @@ export const tasksSlice = createSlice({
         };
       }
     );
-    //tokenが切れた場合はlogin画面へ遷移
+    // tokenが切れた場合はlogin画面へ遷移
     builder.addCase(fetchAsyncCreateTask.rejected, () => {
       window.location.href = "/";
     });

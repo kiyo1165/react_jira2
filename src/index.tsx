@@ -8,16 +8,16 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Auth from "./features/auth/Auth";
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Auth />}></Route>
-          <Route path="/tasks" element={<App />}></Route>
-        </Routes>
-      </Router>
-    </Provider>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Auth />}></Route>
+        <Route path="/tasks" element={<App />}></Route>
+      </Routes>
+    </Router>
+  </Provider>,
+  // </React.StrictMode>,
   document.getElementById("root")
 );
 

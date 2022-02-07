@@ -18,7 +18,6 @@ import {
   fetchAsyncGetUsers,
   fetchAsyncGetCategory,
   selectEditedTask,
-  selectTasks,
 } from "./features/task/taskSlice";
 
 import TaskList from "./features/task/TaskList";
@@ -38,7 +37,6 @@ const theme = createTheme({
 const App: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const editedTask = useSelector(selectEditedTask);
-  const tasks = useSelector(selectTasks);
   const loginUser = useSelector(selectLoginUser);
   const profiles = useSelector(selectProfiles);
 
@@ -111,8 +109,7 @@ const App: React.FC = () => {
             </div>
           </Grid>
           <Grid item xs={6}>
-            {/* タスクリストがあれば表示する。左辺がtrueの場合右辺を返( 論理積 (&&)) */}
-            {tasks[0]?.task && <TaskList />}
+            <TaskList />
           </Grid>
           <Grid item xs={6}>
             <Grid
