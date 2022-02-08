@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Auth from "./features/auth/Auth";
+
 ReactDOM.render(
   // <React.StrictMode>
   <Provider store={store}>
