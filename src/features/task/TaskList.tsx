@@ -4,8 +4,6 @@ import {
   DeleteOutlineOutlined,
   EditOffOutlined,
   AddCircleOutline,
-  Sort,
-  NetworkLockedRounded,
 } from "@mui/icons-material";
 
 import {
@@ -24,7 +22,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectLoginUser, selectProfiles } from "../auth/authSlice";
 import {
   fetchAsyncDeleteTask,
-  selectSelectedTask,
   editTask,
   selectTasks,
   selectTask,

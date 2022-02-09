@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Auth.module.css";
 import { TextField, Button } from "@mui/material";
-import Box from "@mui/material/Box";
 import { useSelector, useDispatch } from "react-redux";
 import { AppDispatch } from "../../app/store";
 import {
