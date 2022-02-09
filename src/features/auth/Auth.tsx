@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Auth.module.css";
 import { TextField, Button } from "@mui/material";
-import Box from "@mui/material/Box";
 import { useSelector, useDispatch } from "react-redux";
 import { AppDispatch } from "../../app/store";
 import {
@@ -42,6 +41,7 @@ const Auth: React.FC = () => {
       <h1>{isLoginView ? "LOG IN" : "REGISTER"}</h1>
       <br />
       {/* 入力エリア */}
+      <h1>テスト</h1>
       <TextField
         InputLabelProps={{
           shrink: true,
